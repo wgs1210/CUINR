@@ -1,5 +1,6 @@
 1.准备硬件环境<br>
 Nvidia GPU ，显存大于10GB即可。<br>
+
 2.准备软硬件环境<br>
 (a)conda create -n cuinr python=3.8<br>
 (b)conda activate cuinr<br>
