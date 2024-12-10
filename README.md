@@ -1,4 +1,4 @@
-1.准备软件环境
+1.准备软件环境\n
 (a)conda create -n cuinr python=3.8
 (b)conda activate cuinr
 (c)pip install torch==1.8.0+cu111 torchvision==0.9.0+cu111 torchaudio==0.8.0 -f https://download.pytorch.org/whl/torch_stable.html
