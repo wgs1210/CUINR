@@ -1,0 +1,52 @@
+seed: 1  # same as the original NeRV repo
+dataset_type: all 
+model:
+  model_name: E_NeRV
+  # pe related
+  pos_b: 1.05
+  pos_l: 40
+  xypos_b: 1.05
+  xypos_l: 40
+  pos_b_tm: 1.05
+  pos_l_tm: 40
+  stem_dim_num: '32'
+  fc_hw_dim: '32_32_48'
+  act: gelu
+  stride_list: [4, 2, 2, 2]
+  expansion: 2
+  reduction: 2
+  lower_width: 96
+  num_blocks: 1
+  bias: true
+  norm: in
+  conv_type: conv
+  sin_res: true
+  sigmoid: true
+  block_dim: 32
+  mlp_dim: 16
+  additional_loss: false
+  additional_loss_weight: 100.0
+  #new
+  useSoftMax: true
+  add_guide: true
+
+train_batchsize: 1
+val_batchsize: 1
+workers: 4
+epoch: 600
+#new
+asc_delta: 1e-9
+isjump: false
+data_name: chikusei
+
+optim:
+  optim_type: Adam
+  lr: 0.0005
+  beta1: 0.5
+  beta2: 0.999
+  lr_schedule: warmup_cosine
+  lr_point: 0.2
+
+loss: Fusion6
+print_freq: 1 # every 50 steps in each epoch to print
+eval_freq: 1  # every 50 epochs to conduct evaluation

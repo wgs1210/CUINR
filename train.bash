@@ -1,0 +1,1 @@
+nohup python -u main_pavia.py > ./logs/train_ours_matiwan_xr_asc.log 2>&1 &

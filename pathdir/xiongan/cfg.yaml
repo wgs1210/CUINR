@@ -1,0 +1,50 @@
+asc_delta: 1e-9
+data_name: matiwan
+dataset_type: all
+epoch: 600
+eval_freq: 1
+isjump: false
+loss: Fusion6
+model:
+  act: gelu
+  add_guide: true
+  additional_loss: false
+  additional_loss_weight: 100.0
+  bias: true
+  block_dim: 32
+  conv_type: conv
+  expansion: 2
+  fc_hw_dim: '16_16_28'
+  lower_width: 96
+  mlp_dim: 16
+  model_name: E_NeRV
+  norm: in
+  num_blocks: 1
+  pos_b: 1.05
+  pos_b_tm: 1.05
+  pos_l: 40
+  pos_l_tm: 40
+  reduction: 2
+  sigmoid: true
+  sin_res: true
+  stem_dim_num: '32'
+  stride_list:
+  - 4
+  - 2
+  - 2
+  - 2
+  useSoftMax: false
+  xypos_b: 1.05
+  xypos_l: 40
+optim:
+  beta1: 0.5
+  beta2: 0.999
+  lr: 0.0005
+  lr_point: 0.2
+  lr_schedule: warmup_cosine
+  optim_type: Adam
+print_freq: 1
+seed: 1
+train_batchsize: 1
+val_batchsize: 1
+workers: 4
