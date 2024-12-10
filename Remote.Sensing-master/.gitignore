@@ -1,0 +1,11 @@
+# auto saved file
+*.asv
+
+# experiment result
+exp.result/
+
+# data file
+data/
+
+# experiment file for thesis
+resultVisualCode/
