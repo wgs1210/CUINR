@@ -29,19 +29,8 @@ Data was derived from the following sources:
 * DFC2018 Houston Dataset: http://dase.grss-ieee.org
 * Pavia Centre Dataset: https://www.ehu.eus/ccwintco/index.php/Hyperspectral_Remote_Sensing_Scenes
 
-├── Remote.Sensing-master/</br>
-│   ├── testVCA.m</br>
-│   ├── main_pavia.py</br>
-│   ├── train.bash</br>
-│   ├── data/</br>
-│   │   └── matiwan/</br>
-│   │       └── matiwan_vca.mat</br>
-│   ├── src/</br>
-│   └── README.md</br>
-└── other_folder/</br>
-    ├── another_file.py</br>
-    └── subfolder/</br>
-
+# Descriptions and implementations of key algorithms
+CUINR uses E-NeRV as the backbone network. For details, refer to /xx/CUINR/model/E_NeRV_pavia.py. The unmixing reconstruction module and Lasc loss are implemented in the AutoEncoder and SumToOneLoss classes in E_NeRV_pavia.py. The alternative implementations of Lasc and Clamp can be found in the softmax function within the AutoEncoder.<br>
 
 # Prepare the software environment
 * conda create -n cuinr python=3.8</br>
