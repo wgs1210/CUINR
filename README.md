@@ -30,7 +30,7 @@ Data was derived from the following sources:
 * Pavia Centre Dataset: https://www.ehu.eus/ccwintco/index.php/Hyperspectral_Remote_Sensing_Scenes
 
 # Descriptions and implementations of key algorithms
-CUINR uses E-NeRV as the backbone network. For details, refer to /xx/CUINR/model/E_NeRV_pavia.py. The unmixing reconstruction module and Lasc loss are implemented in the AutoEncoder and SumToOneLoss classes in E_NeRV_pavia.py. The alternative implementations of Lasc and Clamp can be found in the softmax function within the AutoEncoder.<br>
+CUINR uses E-NeRV as the backbone network. For details, refer to /xx/CUINR/model/E_NeRV_pavia.py. The unmixing reconstruction module and Lasc loss are implemented in the AutoEncoder and SumToOneLoss in E_NeRV_pavia.py. The alternative implementations of Lasc and Clamp can be found in the softmax function within the AutoEncoder.<br>
 
 # Prepare the software environment
 * conda create -n cuinr python=3.8</br>
