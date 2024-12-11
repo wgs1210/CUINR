@@ -30,7 +30,7 @@ Data was derived from the following sources:
 * Pavia Centre Dataset: https://www.ehu.eus/ccwintco/index.php/Hyperspectral_Remote_Sensing_Scenes
 
 # Descriptions and implementations of key algorithms
-CUINR uses E-NeRV as the backbone network. For details, refer to /xx/CUINR/model/E_NeRV_pavia.py. The unmixing reconstruction module and Lasc loss are implemented in the AutoEncoder and SumToOneLoss in E_NeRV_pavia.py. The alternative implementations of Lasc and Clamp can be found in the softmax function within the AutoEncoder.<br>
+CUINR uses E-NeRV as the backbone network, specifically detailed in /xx/CUINR/model/E_NeRV_pavia.py. The unmixing reconstruction module and the two physical constraints, ANC and ASC, are implemented in the AutoEncoder and SumToOneLoss within E_NeRV_pavia.py. The alternative implementations of Lasc and Clamp can be found in the softmax function within AutoEncoder.<br>
 
 # Prepare the software environment
 * conda create -n cuinr python=3.8</br>
@@ -42,7 +42,7 @@ CUINR uses E-NeRV as the backbone network. For details, refer to /xx/CUINR/model
 # Prepare the training data
 * Open the folder Remote.Sensing-master and locate the file testVCA.m. 
 Modify the input file directory (/xx/CUINR/original_data/matiwan_uint16.mat), execute the method, and output the preprocessed data. 
-Then place the resulting file in the designated CUINR directory: /xx/CUINR/data/matiwan/matiwan_vca.mat (using the Matiwan dataset as an example).</br>
+Then place the resulting file in the designated CUINR directory: /xx/CUINR/data/matiwan/matiwan_vca.mat. (using the Matiwan dataset as an example). Alternatively, you can directly use matiwan_vca.mat from data.zip. </br>
 * Locate the CUINR main directory, find the file main_pavia.py and the program entry point main. Modify the rootpath and the training data directory /xx/CUINR/data/matiwan as well as the file name matiwan_vca.mat.</br>
 # Start training
 * Run ./train.bash. After training is complete, the model files will be saved in /xx/CUINR/pathdir/datasetname.</br>
