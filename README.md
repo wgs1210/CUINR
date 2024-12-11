@@ -1,4 +1,4 @@
-# Trianed dataset
+# Training data
 
 [https://doi.org/10.5281/zenodo.14391084](https://doi.org/10.5281/zenodo.14391084)
 
@@ -29,6 +29,20 @@ Data was derived from the following sources:
 * DFC2018 Houston Dataset: http://dase.grss-ieee.org
 * Pavia Centre Dataset: https://www.ehu.eus/ccwintco/index.php/Hyperspectral_Remote_Sensing_Scenes
 
+├── Remote.Sensing-master/</br>
+│   ├── testVCA.m</br>
+│   ├── main_pavia.py</br>
+│   ├── train.bash</br>
+│   ├── data/</br>
+│   │   └── matiwan/</br>
+│   │       └── matiwan_vca.mat</br>
+│   ├── src/</br>
+│   └── README.md</br>
+└── other_folder/</br>
+    ├── another_file.py</br>
+    └── subfolder/</br>
+
+
 # Prepare the software environment
 * conda create -n cuinr python=3.8</br>
 * conda activate cuinr</br>
@@ -37,13 +51,16 @@ Data was derived from the following sources:
 * pip install -r ./cuop.txt</br>
 
 # Prepare the training data
-打开文件夹Remote.Sensing-master找到testVCA.m.更改其中的输入文件目录(xx/CUINR/original_data)，执行方法输出训练数据，并将其放入CUINR指定目录下。xx/CUINR/data/matiwan/xx.mat。（已matiwan数据集为例）</br>
-(b)在CUINR目录下，找到main_pavia.py,以及程序入口main，修改rootpath和训练数据目录以及文件名。</br>
-(c)开始训练，训练完成后，模型文件会被保存到pathdir/datasetname下</br>
-(d)执行main_pavia_eval.py，有提供预训练的模型。执行完成后，xxx.tmp即为最后的压缩文件，计算压缩比，可以用原始文件大小/tmp的文件</br>
-
-**请注意**
-经过vca后，文件经过了归一化处理，所以存储后会变大，但这只是属于训练前的预处理，这一步可以在内存中进行，为了方便演示，这里将其存储为mat文件。因此，并不将其作为压缩前的文件。或者在程序结束后，将其删即可。
+* Open the folder Remote.Sensing-master and locate the file testVCA.m. 
+Modify the input file directory (/xx/CUINR/original_data/matiwan_uint16.mat), execute the method, and output the preprocessed data. 
+Then place the resulting file in the designated CUINR directory: /xx/CUINR/data/matiwan/matiwan_vca.mat (using the Matiwan dataset as an example).</br>
+* Locate the CUINR main directory, find the file main_pavia.py and the program entry point main. Modify the rootpath and the training data directory /xx/CUINR/data/matiwan as well as the file name matiwan_vca.mat.</br>
+# Start training
+* Run ./train.bash. After training is complete, the model files will be saved in /xx/CUINR/pathdir/datasetname.</br>
+# Eval
+* run python  main_pavia_eval.py. The execution process is similar to train. This file contains a demo for testing the pretrained model.<br>
+### Please note: 
+After VCA, the file undergoes normalization, which causes its size to increase after storage(data.zip). However, this is just part of the preprocessing before training, and this step can be done in memory. For the sake of demonstration, it is stored as a .mat file here. Therefore, it should not be considered as the file before compression. Alternatively, you can delete it after the program finishes.
 
 
 
