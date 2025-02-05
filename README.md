@@ -18,10 +18,6 @@ The data used for training is from data.zip, which is the pre-processed file. Fo
 **Description:** The pre-processed file.
 ## Access information
 
-Other publicly accessible locations of the data:
-
-* https://pan.baidu.com/s/1hjRfATcH30XmdsEMzx1HRg?pwd=hvfl
-
 Data was derived from the following sources:
 
 * Chikusei Dataset: https://naotoyokoya.com/Download.html
