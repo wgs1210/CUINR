@@ -199,7 +199,7 @@ def init_vca_flag(args, bandnumber):
     for c in range(bandnumber):
         args.isvca[c] = 0
 
-rootpath = r'C:\Users\jj\Documents\project\python_server\CUINR'
+rootpath = r'C:\Users\jj\Documents\project\python_server\CUINR_main'
 if __name__ == '__main__':
     parser = argparse.ArgumentParser('E-NeRV training and evaluation script', parents=[get_args_parse()])
     args = parser.parse_args()
