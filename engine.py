@@ -20,6 +20,7 @@ def train_one_epoch(
     dataset = None,
     sum2one = None,
     scheduler = None,
+    apply_clamp_inst = None,
 ):
     model.train()
     epoch_start_time = datetime.now()
