@@ -15,7 +15,7 @@ from torch.utils.data.distributed import DistributedSampler
 from engine import train_one_epoch, evaluate, self_savetmp
 from torch.utils.tensorboard import SummaryWriter
 import utils.misc as utils
-from model.E_NeRV_pavia import SumToOneLoss
+from model.E_NeRV_pavia import SumToOneLoss, NonZeroClipper
 import json
 
 def get_args_parse():
@@ -79,6 +79,7 @@ def main(args):
     sampler_train = DistributedSampler(dataset_train) if args.distributed else None
     sampler_val = DistributedSampler(dataset_val) if args.distributed else None
     sum2one = SumToOneLoss().to(device)
+    clipzero = NonZeroClipper()
     dataloader_train = DataLoader(
         dataset_train, batch_size=cfg['train_batchsize'], shuffle=(sampler_train is None), num_workers=cfg['workers'], 
         pin_memory=True, sampler=sampler_train, drop_last=True, worker_init_fn=utils.worker_init_fn
@@ -122,7 +123,7 @@ def main(args):
             sampler_train.set_epoch(epoch)
 
         train_stats = train_one_epoch(#dataset_train新增
-            model, dataloader_train, optimizer, device, epoch, cfg, args, datasize, start_time, writer, dataset_train, sum2one,scheduler
+            model, dataloader_train, optimizer, device, epoch, cfg, args, datasize, start_time, writer, dataset_train, sum2one,scheduler,clipzero
         )
 
         train_best_psnr = train_stats['train_psnr'][-1] if train_stats['train_psnr'][-1] > train_best_psnr else train_best_psnr
