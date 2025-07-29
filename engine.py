@@ -91,6 +91,10 @@ def train_one_epoch(
 
         train_loss += losses.item()
 
+        if args.ours:#add unmixing
+            #enemember nonnegative
+            model.unmixing.decoder[0].apply(apply_clamp_inst)#端元非负
+        
         # compute psnr and msssim
         psnr_list.append(utils.psnr_fn(output_list, target_list))
         msssim_list.append(utils.msssim_fn(output_list, target_list))
