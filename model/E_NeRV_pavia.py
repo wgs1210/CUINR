@@ -305,6 +305,12 @@ class WGSAttension(nn.Module):
         result = g * input1 + (1-g)*input2
         return result
 
+class NonZeroClipper(object):
+    def __call__(self, module):
+        if hasattr(module, 'weight'):
+            w = module.weight.data
+            w.clamp_(1e-6,1)
+
 class SumToOneLoss(nn.Module):
     def __init__(self):
         super(SumToOneLoss, self).__init__()
