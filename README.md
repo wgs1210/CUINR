@@ -43,7 +43,7 @@ CUINR uses E-NeRV as the backbone network, specifically detailed in /xx/CUINR/mo
 * Open the folder Remote.Sensing-master and locate the file testVCA.m. 
 Modify the input file directory (/xx/CUINR/original_data/matiwan_uint16.mat), execute the method, and output the preprocessed data. 
 Then place the resulting file in the designated CUINR directory: /xx/CUINR/data/matiwan/matiwan_vca.mat. (using the Matiwan dataset as an example). Alternatively, you can directly use matiwan_vca.mat from data_v2.zip. </br>
-* Locate the CUINR main directory, find the file main_pavia.py and the program entry point main. Modify the rootpath and the training data directory /xx/CUINR/data/matiwan as well as the file name matiwan_vca.mat.</br>
+* Locate the CUINR main directory, find the file main_pavia.py and the program entry point main. Modify the rootpath, the training data directory(/xx/CUINR/data/matiwan), and the file name matiwan_vca.mat.</br>
 # Train
 * Run ./train.bash. After training is complete, the model files will be saved in /xx/CUINR/pathdir/datasetname.</br>
 # Eval
