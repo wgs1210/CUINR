@@ -21,9 +21,12 @@ The data used for training is from data.zip, which is the pre-processed file. Fo
 Data was derived from the following sources:
 
 * Chikusei Dataset: https://naotoyokoya.com/Download.html
-* Matiwan Dataset: http://www.hrs-cas.com/a/share/shujuchanpin/
+* Matiwan Dataset: https://aistudio.baidu.com/datasetdetail/100218
 * DFC2018 Houston Dataset: http://dase.grss-ieee.org
-* Pavia Centre Dataset: https://www.ehu.eus/ccwintco/index.php/Hyperspectral_Remote_Sensing_Scenes
+* Pavia Centre, and Cuprite Dataset: https://www.ehu.eus/ccwintco/index.php/Hyperspectral Remote Sensing Scenes
+• Indian Pines Dataset: https://purr.purdue.edu/publications/1947/1
+• Jasper Ridge Dataset: https://lesun.weebly.com/hyperspectral-data-set.html
+
 
 # Descriptions and implementations of key algorithms
 CUINR uses E-NeRV as the backbone network, specifically detailed in /xx/CUINR/model/E_NeRV_pavia.py. The unmixing reconstruction module and the two physical constraints, ANC and ASC, are implemented in the AutoEncoder and SumToOneLoss within E_NeRV_pavia.py. The alternative implementations of Lasc and Clamp can be found in the softmax function within AutoEncoder.<br>
