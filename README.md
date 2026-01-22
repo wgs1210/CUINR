@@ -4,16 +4,16 @@
 
 ## Description of the data and file structure
 
-The uploaded data contains two ZIP files: one is the original hyperspectral image (original_data.zip), and the other is the hyperspectral image processed by VCA (data.zip).
+The uploaded data contains two ZIP files: one is the original hyperspectral image (original_data_v2.zip), and the other is the hyperspectral image processed by VCA (data_v2.zip).
 
-The data used for training is from data.zip, which is the pre-processed file. For convenience in demonstration, it is stored as a MAT file.
+The data used for training is from data_v2.zip, which is the pre-processed file. For convenience in demonstration, it is stored as a MAT file.
 ### Files and variables
 
-#### File: original\_data.zip
+#### File: original\_data_v2.zip
 
 **Description:** This zip file contains uncompressed files, and it can also be downloaded from the following link: https://drive.google.com/file/d/1PJpyaldwbXjKljNgZQVnkA7V77ZOqnTi/view?usp=sharing.
 
-#### File: data.zip
+#### File: data_v2.zip
 
 **Description:** This zip file contains the pre-processed file and it can also be downloaded from the following link:
 https://drive.google.com/file/d/1QuDtFDbDqWjw-h40KwS-Aah5BASGX7b4/view?usp=sharing.
@@ -30,7 +30,7 @@ Data was derived from the following sources:
 
 
 # Descriptions and implementations of key algorithms
-CUINR uses E-NeRV as the backbone network, specifically detailed in /xx/CUINR/model/E_NeRV_pavia.py. The unmixing reconstruction module and the two physical constraints, ANC and ASC, are implemented in the AutoEncoder and SumToOneLoss within E_NeRV_pavia.py. The alternative implementations of Lasc and Clamp can be found in the softmax function within AutoEncoder.<br>
+CUINR uses E-NeRV as the backbone network, specifically detailed in /xx/CUINR/model/E_NeRV_pavia.py. The unmixing reconstruction module and the two physical constraints, ANC and ASC, are implemented in the AutoEncoder and Softmax.<br>
 
 # Prepare the software environment
 * conda create -n cuinr python=3.8</br>
