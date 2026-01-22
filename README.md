@@ -11,7 +11,7 @@ The data used for training is from data.zip, which is the pre-processed file. Fo
 
 #### File: original\_data.zip
 
-**Description:** The uncompressed file.
+**Description:** The uncompressed file. It can also be downloaded from the following link: https://drive.google.com/drive/folders/1xuNnzjN_LwVj3eqI94npDtnledSfBWTB?usp=drive_link.
 
 #### File: data.zip
 
