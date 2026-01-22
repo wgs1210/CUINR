@@ -23,7 +23,7 @@ Data was derived from the following sources:
 * Chikusei Dataset: https://naotoyokoya.com/Download.html
 * Matiwan Dataset: https://aistudio.baidu.com/datasetdetail/100218
 * DFC2018 Houston Dataset: http://dase.grss-ieee.org
-* Pavia Centre, and Cuprite Dataset: https://www.ehu.eus/ccwintco/index.php/Hyperspectral Remote Sensing Scenes
+* Pavia Centre, and Cuprite Dataset: https://www.ehu.eus/ccwintco/index.php/Hyperspectral_Remote_Sensing_Scenes
 * Indian Pines Dataset: https://purr.purdue.edu/publications/1947/1
 * Jasper Ridge Dataset: https://lesun.weebly.com/hyperspectral-data-set.html
 
