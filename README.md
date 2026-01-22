@@ -30,7 +30,7 @@ Data was derived from the following sources:
 
 
 # Descriptions and implementations of key algorithms
-CUINR uses E-NeRV as the backbone network, specifically detailed in /xx/CUINR/model/E_NeRV_pavia.py. The unmixing reconstruction module is implemented in the AutoEncoder, while the two physical constraints, ANC and ASC, are enforced using a Softmax layer..<br>
+CUINR uses E-NeRV as the backbone network, specifically detailed in /xx/CUINR/model/E_NeRV_pavia.py. The unmixing reconstruction module is implemented in the AutoEncoder, while the two physical constraints, ANC and ASC, are enforced using a Softmax layer.<br>
 
 # Prepare the software environment
 * conda create -n cuinr python=3.8</br>
